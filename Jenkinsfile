@@ -3,7 +3,12 @@ pipeline {
 	agent {
 		label 'Slave_Induccion'
 	}
-		
+	
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '5')) 
+		disableConcurrentBuilds() 
+	}
+	
 	//A section defining tools to auto-install and put on the PATH
 	tools {
 		jdk 'JDK8_Centos'
