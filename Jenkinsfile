@@ -1,7 +1,7 @@
 pipeline {
 	//where and how to execute the Pipeline
 	agent {
-		label 'Slave5'
+		label 'Slave_Induccion'
 	}
 		
 	//A section defining tools to auto-install and put on the PATH
